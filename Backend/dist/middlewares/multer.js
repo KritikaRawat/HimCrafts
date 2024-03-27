@@ -1,6 +1,5 @@
-//uuid is random generator of new and unique id
-//v4 is the method of uuid
 import multer from "multer";
+// import { extname } from "path";
 import { v4 as uuid } from "uuid";
 const storage = multer.diskStorage({
     destination(req, file, callback) {
