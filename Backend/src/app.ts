@@ -17,7 +17,7 @@ import NodeCache from 'node-cache';
 import {config} from "dotenv";
 import morgan from "morgan";
 import Stripe from 'stripe';
-
+import cors from "cors";
 
 config({
   path:"./.env"
@@ -36,6 +36,7 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("API is working /api/v1");
